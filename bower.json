@@ -1,0 +1,27 @@
+{
+  "name": "single-page",
+  "homepage": "https://github.com/Elehisie/single-page",
+  "authors": [
+    "Elehisie <elehisie@gmail.com>"
+  ],
+  "description": "a starting point for single page apps",
+  "main": "index.html",
+  "moduleType": [],
+  "keywords": [
+    "single",
+    "page",
+    "javascript"
+  ],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "jquery": "~2.2.3",
+    "font-awesome": "fontawesome#~4.6.1"
+  }
+}
