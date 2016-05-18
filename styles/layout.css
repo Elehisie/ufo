@@ -1,0 +1,122 @@
+/*generic layout considering phones, tablets and desktops*/
+
+body {
+  width: 100%;
+  margin: 0 auto;
+  font-family: Verdana, sans-serif;
+  font-size: 16pt;
+  background-color: hotpink;
+}
+
+nav {
+  margin: 0 auto;
+  width: 100%;
+  display: flex;
+  background-color: yellow;
+  text-align: left;
+}
+
+nav#slideMenu {
+  display: none;
+  width: 100%;
+  flex-direction: column;
+  font-size: 2em;
+}
+
+nav p {
+  padding-left: 1em;
+}
+
+section {
+  /* flex box container */
+  width: 90%;
+  margin: 0 auto;
+  padding: 5px 20px;
+  display: flex;
+  background-color: purple;
+  justify-content: space-around;
+}
+
+article {
+  width: 98%;
+  background-color: deeppink;
+}
+
+aside {
+  display: none;
+}
+
+/* utility classes */
+.large {
+  display: none;
+}
+
+.medium {
+  display: none;
+}
+
+.toggler {
+  cursor: pointer;
+}
+
+@media screen and (min-width: 479px) and (max-width: 699px) {
+  /*big phones landscpaed and up*/
+  body {
+    background-color: green;
+  }
+
+  nav#bignav {
+    display: flex;
+  }
+
+  nav#default {
+    display: none;
+  }
+}
+
+@media screen and (min-width: 700px) {
+  body {
+    background-color: orange;
+  }
+
+  nav#slideMenu {
+    display: none;
+    width: 35%;
+    flex-direction: column;
+    font-size: 1em;
+    position: fixed;
+    top: 0;
+  }
+
+  /* utility classes */
+  .medium {
+    display: inline-block;
+  }
+}
+
+  @media screen and (min-width: 1280px) {
+    body {
+      background-color: red;
+    }
+
+    section {
+      width: 95%;
+      margin: 0 auto;
+      padding: 5px 20px;
+      display: flex;
+      background-color: purple;
+      justify-content: space-around;
+    }
+
+    aside {
+      width: 33%;
+      max-width: 320px;
+      display: flex;
+      background-color: lightblue;
+    }
+
+    /* utility classes */
+    .large {
+      display: inline-block;
+    }
+}
