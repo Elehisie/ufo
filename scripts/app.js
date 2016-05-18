@@ -1,11 +1,11 @@
-$(function() {
-  //jquery code goes here
-  $('.toggler').click(function(){
-    //onclick: slide in the hidden menu and slide out the nav bar.
-    if ($('#slideMenu').css('display')=='none') {
-      $('#slideMenu').css({'display':'flex'});
-    } else {
-      $('#slideMenu').css({'display':'none'});
-    }
-  });
-});
+(function() {
+  var controlMenu = function() {
+    var toggler = document.getElementsByClassName('toggler');
+    toggler.addEventListenener('click', function() {
+      if (this.style.display == 'none') { this.style.display = 'flex'; }
+      else { this.style.display = 'none'; }
+    });
+  };
+
+  controlMenu();
+})();
