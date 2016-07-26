@@ -1,5 +1,6 @@
 (function () {
-  var collection = {
+  var allPanels = {
+    //this wont be needed when we have a db of panels
     intro: {
       text: 'this is a story that you read in an active way. there are decisions to be made, things to find.',
     },
@@ -23,10 +24,10 @@
     document.getElementById('panels').innerHTML = '';
 
     var panels = {};
-    Object.keys(collection).forEach(function(key) {
-      // if (story.find(key)) { panels[key] = collection.key; }
-      story.find(function (key){
-        panels[key] = collection[key];
+    Object.keys(allPanels).forEach(function(key) {
+      // if (story.find(key)) { panels[key] = allPanels.key; }
+      story.find(function(key){
+        panels[key] = allPanels[key];
       });
     });
     console.log(panels);
