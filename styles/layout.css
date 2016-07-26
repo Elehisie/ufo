@@ -12,12 +12,24 @@ nav {
   display: flex;
   background-color: yellow;
   text-align: left;
+  font-size: 0.85em;
 }
 
 nav#slideMenu {
   display: none;
   flex-direction: column;
-  font-size: 2em;
+  width: 90%;
+  height: 100%;
+  position: fixed;
+  top: 0;
+}
+
+nav#slideMenu p {
+  background-color: darkviolet;
+  margin: 0;
+  margin-bottom: 0.2em;
+  font-size: 0.95em;
+  line-height: 1.9em;
 }
 
 nav p {
@@ -49,6 +61,7 @@ section {
 
 article {
   background-color: deeppink;
+  width: 100%;
 }
 
 aside {
@@ -68,33 +81,29 @@ aside {
   cursor: pointer;
 }
 
-@media screen and (min-width: 479px) and (max-width: 699px) {
+@media screen and (min-width: 479px) and (max-width: 799px) {
   /*big phones landscpaed and up*/
   body {
     background-color: green;
   }
-
-  nav#bignav {
-    display: flex;
-  }
-
-  nav#default {
-    display: none;
-  }
 }
 
-@media screen and (min-width: 700px) {
+@media screen and (min-width: 800px) {
   body {
     background-color: orange;
   }
 
   nav#slideMenu {
     display: none;
-    width: 35%;
+    width: 70%;
     flex-direction: column;
     font-size: 1em;
     position: fixed;
     top: 0;
+  }
+
+  aside {
+      display: inline-block;
   }
 
   /* utility classes */
@@ -108,20 +117,27 @@ aside {
       background-color: red;
     }
 
-    section {
-      width: 95%;
-      margin: 0 auto;
-      padding: 5px 20px;
+    main {
+      width: 100%;
+      padding: 0;
+      margin: 0;
+      background-color: cornflowerblue;
       display: flex;
+      justify-content: center;
+      flex-direction: row;
+    }
+
+    section {
+      width: 70%;
       background-color: purple;
-      justify-content: space-around;
     }
 
     aside {
-      width: 33%;
-      max-width: 320px;
-      display: flex;
+      width: 30%;
+      margin: 0 auto;
+      padding: 5px 20px;
       background-color: lightblue;
+      flex-direction: column;
     }
 
     /* utility classes */
